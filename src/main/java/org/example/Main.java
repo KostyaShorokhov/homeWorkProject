@@ -22,7 +22,6 @@ public class Main {
       System.out.println("arraySecond (" + i + ") = " + arraySecond[i]);
     }
 
-    //todo: print unique result (without repeat)
     System.out.println("result:");
     for (int i = 0; i < arrayFirst.length; i++) {
       for (int k : arraySecond) {
