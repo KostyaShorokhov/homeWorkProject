@@ -1,10 +1,10 @@
-package org.example.interfaces;
+package org.campaign.interfaces;
 
 import java.time.LocalDateTime;
-import org.example.enums.AdsStatusType;
-import org.example.enums.CampaignBlockReason;
-import org.example.enums.CampaignType;
-import org.example.object.CampaignDto;
+import org.campaign.enums.AdsStatusType;
+import org.campaign.enums.CampaignBlockReason;
+import org.campaign.enums.CampaignType;
+import org.campaign.object.CampaignDto;
 
 public interface Campaign {
 

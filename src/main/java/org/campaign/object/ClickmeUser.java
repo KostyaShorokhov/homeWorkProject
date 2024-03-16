@@ -1,6 +1,6 @@
-package org.example.object;
+package org.campaign.object;
 
-import org.example.interfaces.User;
+import org.campaign.interfaces.User;
 
 abstract class ClickmeUser implements User {
   private int userId;
@@ -14,7 +14,7 @@ abstract class ClickmeUser implements User {
   private String email;
   private Integer employerId;
   private Integer managerId;
-  private static String managerEmail = "test@test.ru";
+  private static final String managerEmail = "test@test.ru";
   private Boolean disableManagerUpdate;
 
   public Integer getEmployerId() {
