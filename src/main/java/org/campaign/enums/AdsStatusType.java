@@ -1,4 +1,4 @@
-package org.example.enums;
+package org.campaign.enums;
 
 public enum AdsStatusType {
   ACTIVE,

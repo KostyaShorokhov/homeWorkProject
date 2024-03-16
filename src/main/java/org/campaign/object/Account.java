@@ -1,11 +1,12 @@
-package org.example.object;
+package org.campaign.object;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import static java.time.ZoneOffset.UTC;
 import java.util.Random;
-import org.example.interfaces.User;
-public class Account implements User {
+import org.campaign.interfaces.User;
+
+public class Account extends BaseUser<Account> implements User {
   private int id;
   private LocalDateTime createdAt;
   private LocalDateTime updatedAt;
@@ -15,7 +16,6 @@ public class Account implements User {
   private Boolean isMain = true;
 
   public Account() {
-
   }
 
   public int getId() {
@@ -128,6 +128,8 @@ public class Account implements User {
     account.setTitle("Тест ЮЛ");
     account.setUpdatedAt(today);
     account.setWhiteListEnabled(true);
+    account.setAdditionalInfo("Дополнительная информация");
+    account.setBalance(2000);
     return account;
   }
 

@@ -1,8 +1,8 @@
-package org.example;
+package org.campaign;
 
-import org.example.object.Account;
-import org.example.object.AdvertisingCampaign;
-import org.example.object.CampaignDto;
+import org.campaign.object.Account;
+import org.campaign.object.AdvertisingCampaign;
+import org.campaign.object.CampaignDto;
 
 public class Main {
   public static void main(String[] args) {

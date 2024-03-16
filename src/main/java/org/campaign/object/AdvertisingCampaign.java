@@ -1,12 +1,12 @@
-package org.example.object;
+package org.campaign.object;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import org.example.enums.AdsStatusType;
-import org.example.enums.CampaignType;
+import org.campaign.enums.AdsStatusType;
+import org.campaign.enums.CampaignType;
 
 public class AdvertisingCampaign extends CampaignDto {
-  private static String nameCampaign = "Тест ";
+  private static final String nameCampaign = "Тест ";
 
   public CampaignDto createAdvertisingCampaign(
       int id,
@@ -17,7 +17,7 @@ public class AdvertisingCampaign extends CampaignDto {
       int accountId
   ) {
     LocalDateTime dateNow = LocalDate.now().atStartOfDay();
-    CampaignDto campaignDto = new CampaignDto().createCampaign(
+    return new CampaignDto().createCampaign(
         id,
         dateNow,
         dateNow,
@@ -31,6 +31,5 @@ public class AdvertisingCampaign extends CampaignDto {
         null,
         accountId
     );
-  return campaignDto;
   }
 }
