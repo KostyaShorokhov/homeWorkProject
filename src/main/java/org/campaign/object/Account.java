@@ -71,7 +71,7 @@ public class Account extends BaseUser<Account> implements User {
   }
 
   public void setMain(Boolean main) {
-    isMain = main;
+    this.isMain = main;
   }
 
   public Account(
@@ -147,5 +147,56 @@ public class Account extends BaseUser<Account> implements User {
     account.setWhiteListEnabled(true);
 
     return account;
+  }
+
+  public static Builder builder() {
+    return new Builder();
+  }
+
+  public static final class Builder {
+    private final Account account;
+
+    public Builder() {
+      this.account = new Account();
+    }
+
+    public Builder setId(int id) {
+      this.account.setId(id);
+      return this;
+    }
+
+    public Builder setCreatedAt(LocalDateTime createdAt) {
+      this.account.setCreatedAt(createdAt);
+      return this;
+    }
+
+    public Builder setUpdatedAt(LocalDateTime updatedAt) {
+      this.account.setUpdatedAt(updatedAt);
+      return this;
+    }
+
+    public Builder setBetaTest(Integer betaTest) {
+      this.account.setBetaTest(betaTest);
+      return this;
+    }
+
+    public Builder setWhiteListEnabled(Boolean whiteListEnabled) {
+      this.account.setWhiteListEnabled(whiteListEnabled);
+      return this;
+    }
+
+    public Builder setTitle(String title) {
+      this.account.setTitle(title);
+      return this;
+    }
+
+    public Builder setMain(Boolean main) {
+      this.account.setMain(main);
+      return this;
+    }
+
+    public Account build() {
+      return account;
+    }
   }
 }
